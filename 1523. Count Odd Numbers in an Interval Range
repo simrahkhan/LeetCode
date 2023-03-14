@@ -1,0 +1,14 @@
+class Solution:
+    def countOdds(self, low: int, high: int) -> int:
+        if low%2 != 0:
+            firstOdd = low
+        else:
+            firstOdd = low + 1
+
+        if high%2 != 0:
+            lastOdd = high
+        else:
+            lastOdd = high - 1
+
+        number = ((lastOdd - firstOdd)/2) + 1
+        return int(number)
